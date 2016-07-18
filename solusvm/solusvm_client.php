@@ -312,7 +312,7 @@ class SolusVMClient {
      * @return string
      */
     public function listClients() {
-        return $this->execute("client-list");
+        return $this->execute(array("action" => "client-list"));
     }
 
     /**
