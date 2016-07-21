@@ -312,7 +312,7 @@ class SolusVMClient {
      * @return string
      */
     public function listClients() {
-        return $this->execute("client-list");
+        return $this->execute(array("action" => "client-list"));
     }
 
     /**
@@ -330,7 +330,7 @@ class SolusVMClient {
             throw new Exception("Invalid NodeID");
         }
 
-        return $this->execute(array("action"=>"vserver-virtualservers", "nodeid"=>$nodeid));
+        return $this->execute(array("action"=>"node-virtualservers", "nodeid"=>$nodeid));
     }
 
     /**
