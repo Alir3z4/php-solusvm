@@ -375,7 +375,7 @@ class SolusVMClient {
                 throw new Exception("Invalid IPv4 Address");
             }
 
-            if(filter_var($forceaddip, FILTER_VALIDATE_BOOLEAN) === false) {
+            if(filter_var($forceaddip, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) === NULL) {
                 throw new Exception("forceaddip must be boolean");
             }
 
@@ -440,7 +440,7 @@ class SolusVMClient {
             throw new Exception("Invalid ServerID");
         }
 
-        if(filter_var($changeHDD, FILTER_VALIDATE_BOOLEAN) === false) {
+        if(filter_var($changeHDD, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) === NULL) {
             throw new Exception("changeHDD must be boolean");
         }
 
@@ -462,7 +462,7 @@ class SolusVMClient {
             throw new Exception("Invalid ServerID");
         }
 
-        if(filter_var($deleteclient, FILTER_VALIDATE_BOOLEAN) === false) {
+        if(filter_var($deleteclient, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) === NULL) {
             throw new Exception("deleteclient must be boolean");
         }
 
